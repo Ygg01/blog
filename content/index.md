@@ -2,5 +2,4 @@
 title: Welcome to Quartz
 ---
 
-This is a blank Quartz installation.
-See the [documentation](https://quartz.jzhao.xyz) for how to get started.
+This is my horrible blog, made with [Obsidian](https://obsidian.md/) and [Quartz](https://github.com/jackyzha0/quartz).
