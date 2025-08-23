@@ -16,7 +16,7 @@ Basically it's a fallacy where you compare actual things to unrealistic idealize
 What does it have to do with Rust? 
 
 Well the argument goes like this. 
-1. Rust promises no UB, but if you use `unsafe` block/functions or traits, you can still trigger UB. 
+1. Rust promises no UB (Undefined Behavior), but if you use `unsafe` block/functions or traits, you can still trigger UB. 
 2. The Rust codebase contains bugs labeled `unsound`
 3. Even then, you could call the C FFI (Foreign function interface), which means it's not safe. And by same extension, Java isn't safe nor any language for that matter, so you might as well use C/C++/Zig/Go.
 
