@@ -5,6 +5,7 @@ date: 2025-08-23
 tags:
   - rust
   - fallacy
+  - seatbelts
 ---
 
 # What is a Nirvana fallacy
@@ -15,18 +16,18 @@ Basically it's a fallacy where you compare actual things to unrealistic idealize
 
 What does it have to do with Rust? 
 
-Well the argument goes like this. 
-1. Rust promises no UB (Undefined Behavior), but if you use `unsafe` block/functions or traits, you can still trigger UB. 
-2. The Rust codebase contains bugs labeled `unsound`
-3. Even then, you could call the C FFI (Foreign function interface), which means it's not safe. And by same extension, Java isn't safe nor any language for that matter, so you might as well use C/C++/Zig/Go.
+Well the argument against using Rust goes like this. Rust promises no UB (Undefined Behavior) but:
+1. If you use `unsafe` block/functions or traits, you can still trigger UB. 
+2. The Rust codebase contains bugs labeled `l-unsound` [This is the link to GitHub issues](https://github.com/rust-lang/rust/issues?q=is%3Aissue%20state%3Aopen%20label%3AI-unsound)
+3. Even then, you could call the C FFI (Foreign function interface), which means it's not safe. And by same extension, Java isn't safe nor any language for that matter, so you might as well use an unsafe language like C, C++, Zig or Go[^1].
 
-To that, here is my honest and **NOT-SARCASTIC-FUTURAMA-RESPONSE**[^1].
+To that, here is my honest and **NOT-SARCASTIC-FUTURAMA-RESPONSE**[^2].
 
 ![[technically_correct.jpg|"YOU ARE TECHNICALLY CORRECT. THE BEST KIND OF CORRECT."]]
 
 # Story of [Strawman](https://en.wikipedia.org/wiki/Hyperbole) Jim
 
-Once upon a time I worked at a casino [^2]. And there I met Jim. Jim was an obsessive gambler and a barely functioning drug addict. At the end of my shift, while having to pick off unwanted stragglers from the floor, I asked him how he became a drug addict.  
+Once upon a time I worked at a casino[^3]. And there I met Jim. Jim was an obsessive gambler and a barely functioning drug addict. At the end of my shift, while having to pick off unwanted stragglers from the floor, I asked him how he became a drug addict.  
   
 His story goes like this: One day Jim went to buy a new car, and a decently priced one at that. So as he was about to sign the dotted line, a thought struck him. Did they test the seatbelts? The salesman told him that no, they don't test each seatbelt; rather, they test models of seatbelts, which are the same within some margin of manufacturing error.  
   
@@ -42,6 +43,6 @@ Later on he broke with friends and family and devoted himself to gambling and sn
 
 Was Jim full of shit? I dunno. But it seems to me like a way to justify his bad habits.
 
-[^1]: It is sarcasm.
-
-[^2]: I never worked at a casino. This story is fictional.
+[^1]: See https://www.ralfj.de/blog/2025/07/24/memory-safety.html
+[^2]: It is sarcasm.
+[^3]: I never worked at a casino. This story is fictional.

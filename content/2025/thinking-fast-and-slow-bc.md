@@ -1,10 +1,11 @@
 ---
-title: "Thinking fast and slow about borrow checker"
+title: Thinking fast and slow about borrow checker
 draft: false
 date: 2025-05-26
 tags:
-- rust
-- borrow-checker
+  - rust
+  - borrow-checker
+  - learning
 ---
 
 # Intro 
@@ -55,7 +56,6 @@ Four. Lifetime elision's *might* be doing people a disservice, by making it easy
 [^1]: Because most algorithm work in math work start at 1, and rarely 0.
 
 [^2]:  I mean, you can do it with `unsafe`, but it's not as easy as in Java.
-
 
 [^3]:Excluding the QnA section that starts at 45min.
 
