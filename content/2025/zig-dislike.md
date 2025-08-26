@@ -122,16 +122,19 @@ Imagine for a second we add an annotation or something to Zig. This function is 
 ```zig  
 @must_comptime  
 fn always_comptime() u8 {  
-    return 42;}  
+    return 42;
+}  
 ```  
   
 Then we call it from a main without it - it will error.  
-```  
+
+
+```zig  
 fn main() {  
 	const random = always_comptime(); // ERROR: Missing comptime call!
 	std.debug.print("Hello, {}!\n", .{random});
 }  
-```  
+```
   
 However, the moment we make it, two things happen.   
 1. We can't use non-`comptime` in `comptime`. It's how code behaves today.  
@@ -182,4 +185,5 @@ I could survive the syntax. And I could theoretically survive the changes. I cou
 [^3]: Future NPM competitor written for and in Zig  
 [^4]: Hyrum's Law:  `With a sufficient number of users of an API, it does not matter what you promise in the contract:  all observable behaviors of your system will be depended on by somebody.`  https://www.hyrumslaw.com/  
 [^5]: I won't pretend to claim to know how Zig does this, so I call it a heuristic. As a bonus round, what happens if the way this mechanism changes from Zig version to Zig version? Do some functions lose `comptime`?  
-[^6]: As per [What color is your function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/) [^7]: There are two sub-options when making `@noncomptime`. One is making it so that if the function is `comptime` the compiler throws an error that the function is `comptime`. The second option is to just ensure that function can't be called from `comptime` even if contents is `comptime`. In my example I'm only considering the latter approach, since it's closer to what Zig is now.
+[^6]: As per [What color is your function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/).
+[^7]: There are two sub-options when making `@noncomptime`. One is making it so that if the function is `comptime` is used in `@noncomptime` block the compiler throws an error that the function is `comptime`. The second option is to just ensure that function can't be called with `comptime` even if contents is `comptime`. In my example I'm only considering the latter approach, since it's closer to how Zig behaves now.
