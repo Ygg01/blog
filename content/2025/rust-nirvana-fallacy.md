@@ -21,7 +21,7 @@ Well the argument against using Rust goes like this. Rust promises no UB (Undefi
 2. The Rust codebase contains bugs labeled `l-unsound` [This is the link to GitHub issues](https://github.com/rust-lang/rust/issues?q=is%3Aissue%20state%3Aopen%20label%3AI-unsound)
 3. Even then, you could call the C FFI (Foreign function interface), which means it's not safe. And by same extension, Java isn't safe nor any language for that matter, so you might as well use an unsafe language like C, C++, Zig or Go[^1].
 
-To that, here is my honest and **NOT-SARCASTIC-FUTURAMA-RESPONSE**[^2].
+To that, here is my honest and **NOT-SARCASTIC-FUTURAMA-RESPONSE** [^2].
 
 ![[technically_correct.jpg|"YOU ARE TECHNICALLY CORRECT. THE BEST KIND OF CORRECT."]]
 
