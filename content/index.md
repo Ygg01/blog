@@ -1,11 +1,18 @@
 ---
 title: Blog Considered Horrible
+tags: 
+- index
+- preface
 ---
 
-Hi I'm Ygg, and this is my horrible blog, made with [Obsidian](https://obsidian.md/) and [Quartz](https://github.com/jackyzha0/quartz). You may not remember it from such masterpieces as [[rust-nirvana-fallacy|Rust, Nirvana fallacy and you]], and [[thinking-fast-and-slow-bc|Are you thinking about Rust or are you just happy to see me?]] 
+> [!warning] Warning
+> 
+> Following blog contains horrible thoughts and ideas by me - Ygg. 
+> 
+> No one is luckily paying me for this.
+> 
+> Expect old references, lame jokes, and sometimes interesting tibdits. 
+> 
+> I program mostly in #java, and I dabble in #rust
 
-What do you mean these aren't the titles? I would never lie. And if I did I would have a very good reason or a Matt Groening / Monthy Python reference.  
-
-I mostly program in Java, but I dabble a lot in Rust. These thoughts are my own, and no one is paying me to have them.
-
-
+All credit for making this blog semi usable goes to [Obsidian](https://obsidian.md/) and [Quartz](https://github.com/jackyzha0/quartz). 
