@@ -7,11 +7,11 @@ tags:
   - fallacy
   - informal-fallacy
 ---
-![[enemy of good.png]]
+![[enemy of good.png|"YOU ARE TECHNICALLY CORRECT. THE BEST KIND OF CORRECT."]]
 
-> [!cite]+
+> [!cite]
 > Le mieux est l'ennemi du bien.  [The best is the enemy of the good.]
->--- In La Bégueule (1772), Voltaire
+> --- In La Bégueule (1772), Voltaire
 
 # Nirvana fallacy
 

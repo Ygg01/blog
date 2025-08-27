@@ -23,7 +23,7 @@ Well the argument against using Rust goes like this. Rust promises no UB (Undefi
 
 To that, here is my honest and **NOT-SARCASTIC-FUTURAMA-RESPONSE** [^2].
 
-![[technically_correct.jpg|"YOU ARE TECHNICALLY CORRECT. THE BEST KIND OF CORRECT."]]
+![[technically_correct.jpg|"YOU ARE TECHNICALLY CORRECT. THE BEST KIND OF CORRECT." Copyright: Disney corporation(tm) ]]
 
 # Story of [Strawman](https://en.wikipedia.org/wiki/Hyperbole) Jim
 
