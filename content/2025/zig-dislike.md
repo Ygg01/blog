@@ -77,7 +77,7 @@ fn main() {
 }  
 ```  
   
-Wait. What? We didn't declare the function to be `comptime`. The dependency just assumed it was. Welcome to the wonderful world of Hyrum's Law [^4]. You now have two solutions. Break backwards compatibility, yank your library, and publish a new major version -OR- never fix the bug. Both are equally enticing.  
+Wait. What? We didn't declare the function to be `comptime`. The dependency just assumed it was. Welcome to the wonderful world of [[hyrums-law|Hyrum's law]]. You now have two solutions. Break backwards compatibility, yank your library, and publish a new major version -OR- never fix the bug. Both are equally enticing.  
   
 ## Leaky, shmeaky, who cares?  
 People that care about backward compatibility. I.e., your dependencies. But not you. You are a cool rebel. You program in Zig and drive a motorcycle you built yourself from used parts. You probably don't need to bother with the rest of this article.  
@@ -116,8 +116,8 @@ It just seems the way the Zig people roll.
 ## Trying to solve it  
 But more than that, leaky details will not mesh well with a [SemVer](https://semver.org/) package manager like NPM or Cargo. How could you even solve this problem in a way that's acceptable for all sides? I'm going to assume that you making function `comptime` or not via documentation is pointless. No one RTFMs. So with that in mind, how would you fix it in a way that prevents the SemVer hazard?   
   
-### `must_comptime` annotation  
-Imagine for a second we add an annotation or something to Zig. This function is always `comptime` and it's an error to call it from non-`comptime` contexts.  
+### `must_comptime` annotation 
+Imagine for a second we add an annotation[^7] or something to Zig. This function is always `comptime` and it's an error to call it from non-`comptime` contexts.  
   
 ```zig  
 @must_comptime  
@@ -141,7 +141,7 @@ However, the moment we make it, two things happen.
 2. We just made `comptime` painful to call. We completed the circuit; it is now definitely a coloring problem.  
   
 ### `noncomptime` annotation  
-Ok, the last part wasn't a huge success. Can we go the opposite way? What if we made functions that weren't supposed to be `comptime` special?[^7] There are two sub-options to make `@noncomptime` work. One could be if the code detects it's `comptime` it errors, S  
+Ok, the last part wasn't a huge success. Can we go the opposite way? What if we made functions that weren't supposed to be `comptime` special?[^8] There are two sub-options to make `@noncomptime` work. One could be if the code detects it's `comptime` it errors, S  
   
 ```zig  
 @noncomptime  
@@ -181,9 +181,15 @@ I could survive the syntax. And I could theoretically survive the changes. I cou
    
   
 [^1]: In an imperative language. Perhaps a proof a la Ada Spark would fare better.  
+
 [^2]: Because everyone carefully read and memorized Appendix J.2 of the C standard, see https://www.dii.uchile.cl/~daespino/files/Iso_C_1999_definition.pdf pg 490  
-[^3]: Future NPM competitor written for and in Zig  
-[^4]: Hyrum's Law:  `With a sufficient number of users of an API, it does not matter what you promise in the contract:  all observable behaviors of your system will be depended on by somebody.`  https://www.hyrumslaw.com/  
-[^5]: I won't pretend to claim to know how Zig does this, so I call it a heuristic. As a bonus round, what happens if the way this mechanism changes from Zig version to Zig version? Do some functions lose `comptime`?  
-[^6]: As per [What color is your function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/).
+
+[^3]: Future NPM competitor written for and in Zig.
+
+[^4]: I won't pretend to claim to know how Zig does this, so I call it a heuristic. As a bonus round, what happens if the way this mechanism changes from Zig version to Zig version? Do some functions lose `comptime`?  
+
+[^5]: As per [What color is your function](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/).
+
+[^6]: Note: I don't know how Zig does code annotations, so I'm using Java's convention. `@annotations` will do something to code when it's evaluated. Or when docs are generated.
+
 [^7]: There are two sub-options when making `@noncomptime`. One is making it so that if the function is `comptime` is used in `@noncomptime` block the compiler throws an error that the function is `comptime`. The second option is to just ensure that function can't be called with `comptime` even if contents is `comptime`. In my example I'm only considering the latter approach, since it's closer to how Zig behaves now.
