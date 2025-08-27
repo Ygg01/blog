@@ -10,7 +10,7 @@ tags:
 
 # What is a Nirvana fallacy
 
-Basically it's a fallacy where you compare actual things to unrealistic idealized alternatives (Wikipedia: https://en.wikipedia.org/wiki/Nirvana_fallacy).  It's a form of appeal to purity for the high-thonking intellectuals.
+Basically it's a fallacy where you compare actual things to unrealistic idealized alternatives, see [[nirvana-fallacy]].  It's a form of appeal to purity for the high-thonking intellectuals.
 
 # Rusting trust
 
