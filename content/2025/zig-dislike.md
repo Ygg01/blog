@@ -178,7 +178,8 @@ It would now be considered  non-`comptime`. Perhaps this is the better way. Howe
 # In conclusion  
   
 I could survive the syntax. And I could theoretically survive the changes. I could probably survive the error messages. But `comptime` and lack of privacy modifiers just don't gel with me. It bothers me on an instinctual and conscious level.  
-   
+
+---
   
 [^1]: In an imperative language. Perhaps a proof a la Ada Spark would fare better.  
 

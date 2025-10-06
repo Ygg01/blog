@@ -52,6 +52,7 @@ Three. The sooner learning happens, the easier will borrow checker seem to the d
 
 Four. Lifetime elision's *might* be doing people a disservice, by making it easy at the start, you're going to make figuring them out much harder later. Think of it, as using a calculator to calculate multiplication, only for later to be forced to do it by hand, when numbers get too big. I'm not advocating for removing lifetime elision, but perhaps teaching it might require doing it by hand at first.
 
+---
 
 [^1]: Because most algorithm work in math work start at 1, and rarely 0.
 

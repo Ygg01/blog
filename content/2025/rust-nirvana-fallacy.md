@@ -43,6 +43,8 @@ Later on he broke with friends and family and devoted himself to gambling and sn
 
 Was Jim full of shit? I dunno. But it seems to me like a way to justify his bad habits.
 
+---
+
 [^1]: See https://www.ralfj.de/blog/2025/07/24/memory-safety.html
 [^2]: It is sarcasm.
 [^3]: I never worked at a casino. This story is fictional.
