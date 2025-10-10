@@ -5,6 +5,7 @@ date: 2025-09-09
 tags:
   - programming
   - package-managers
+  - odin
 ---
 # Intro 
 
