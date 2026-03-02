@@ -71,6 +71,7 @@ const config: QuartzConfig = {
       Plugin.TableOfContents(),
       Plugin.CrawlLinks({ markdownLinkResolution: "shortest" }),
       Plugin.Description(),
+      Plugin.FigureCaptions(),
       Plugin.HardLineBreaks(),
       Plugin.Latex({ renderEngine: "katex" }),
     ],
