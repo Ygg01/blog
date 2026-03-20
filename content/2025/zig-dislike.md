@@ -43,6 +43,7 @@ As for #4, yeah, adding private fields would complicate the compiler, but now we
 But it gets even worse. I was interested in understanding the `comptime`. It's a very lauded feature, and with good reason. It seems to offer a seamless transition between generic and non-generic code. While investigating how they achieved it and what the trade-offs are, I found the [Zig-style generics are not well-suited for most languages](https://typesanitizer.com/blog/zig-generics.html) article (please give it a read; it should take around 19-23 min.). After reading it, I'm not so sure Rust needs to really embrace `comptime`.  
   
 ## A semi-practical demonstration  
+
 Let's say we write the following library (as of Zig ~`0.15.1`). It has no values and returns a random value somehow. A true black box.  
   
 ```zig  
@@ -80,6 +81,7 @@ fn main() {
 Wait. What? We didn't declare the function to be `comptime`. The dependency just assumed it was. Welcome to the wonderful world of [[hyrums-law|Hyrum's law]]. You now have two solutions. Break backwards compatibility, yank your library, and publish a new major version -OR- never fix the bug. Both are equally enticing.  
   
 ## Leaky, shmeaky, who cares?  
+
 People that care about backward compatibility. I.e., your dependencies. But not you. You are a cool rebel. You program in Zig and drive a motorcycle you built yourself from used parts. You probably don't need to bother with the rest of this article.  
   
 Is he gone? Good.   
@@ -114,6 +116,7 @@ And to clarify, this isn't unknown; in the link to GitHub I mentioned, Andrew Ke
 It just seems the way the Zig people roll.  
   
 ## Trying to solve it  
+
 But more than that, leaky details will not mesh well with a [SemVer](https://semver.org/) package manager like NPM or Cargo. How could you even solve this problem in a way that's acceptable for all sides? I'm going to assume that you making function `comptime` or not via documentation is pointless. No one RTFMs. So with that in mind, how would you fix it in a way that prevents the SemVer hazard?   
   
 ### `must_comptime` annotation 

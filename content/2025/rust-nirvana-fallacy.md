@@ -27,7 +27,7 @@ To that, here is my honest and **NOT-SARCASTIC-FUTURAMA-RESPONSE** [^2].
 
 # Story of [Strawman](https://en.wikipedia.org/wiki/Hyperbole) Jim
 
-Once upon a time I worked at a casino[^3]. And there I met Jim. Jim was an obsessive gambler and a barely functioning drug addict. At the end of my shift, while having to pick off unwanted stragglers from the floor, I asked him how he became a drug addict.  
+Once upon a time I worked at a casino[^3]. And there I met Jim. Jim was an obsessive gambler and a barely functioning drug addict. At the end of my shift, while having to pick off unwanted stragglers from the floor, I asked him how he became a drug addict. 
   
 His story goes like this: One day Jim went to buy a new car, and a decently priced one at that. So as he was about to sign the dotted line, a thought struck him. Did they test the seatbelts? The salesman told him that no, they don't test each seatbelt; rather, they test models of seatbelts, which are the same within some margin of manufacturing error.  
   
