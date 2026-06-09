@@ -10,4 +10,5 @@ private/
 .replit
 replit.nix
 .quartz/
+.idea/
 quartz/cli/tui/dist/
