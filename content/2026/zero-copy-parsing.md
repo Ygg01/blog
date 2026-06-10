@@ -40,7 +40,7 @@ Here comes the first issue. Character escaping. Most languages support it. JSON,
 
 Let's first look at a message at the byte level. In our example, it's a simple `Hi \u1F600!` message, which renders to  `Hi 😀!`. Couldn't be simpler. 
 
-![[content/images/zc_cursed_emoji.png]]*It's just an emoji. It can't hurt us.*
+![[zc_cursed_emoji.png]]*It's just an emoji. It can't hurt us.*
 
 So you just go slice the whole message, right? Great idea. Set the pointer to start and say the length is 10. We look at our `InlineString("Hi \u1F600!")`. Ah, right, we need to convert the `1F600` from Unicode code point to bytes. And if [you check](https://www.fileformat.info/info/unicode/char/1f600/index.htm), you'll find out it's `0xF0`, `0x9F`, `0x98`, and `0x80`. Doesn't really roll off the tongue, but beggars can't be choosers. So we just need to modify the input string. And here lies the first complication. 
 
@@ -48,7 +48,7 @@ So you just go slice the whole message, right? Great idea. Set the pointer to st
 
 This isn't that uncommon of a limit, and if your code can't get access to a mutable string, your only course of action is to allocate a bit. It's not perfect, but it's good enough.
 
-![[content/images/zc_cow_method.png]]*This is the famous COW method*
+![[zc_cow_method.png]]*This is the famous COW method*
 
 ### The input string is unmodifiable. Be Lazy!
 
