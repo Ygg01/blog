@@ -1,0 +1,224 @@
+:root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: rgb(46, 52, 64);
+    --heading-color: rgb(191, 97, 106);
+    --text-color: #ddd;
+    --emphasis-color: rgb(235, 203, 139);
+    --link-color: rgb(208, 135, 112);
+    --tertiary-color: rgb(163, 190, 140);
+    --visited-color: #8b6fcb;
+    --blockquote-color: #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgb(46, 52, 64);
+        --heading-color: rgb(191, 97, 106);
+        --text-color: #ddd;
+        --link-color: rgb(208, 135, 112);
+        --visited-color: #8b6fcb;
+        --blockquote-color: #ccc;
+    }
+}
+
+body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+h1,
+h5,
+h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+}
+
+h2 {
+    font-family: var(--font-main);
+    color: rgb(235, 203, 139);
+}
+
+h3 {
+    font-family: var(--font-main);
+    color: rgb(163, 190, 140);
+}
+
+a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+nav a {
+    margin-right: 8px;
+}
+
+strong,
+italic,
+em,
+b {
+    color: var(--emphasis-color);
+}
+
+button {
+    margin: 0;
+    cursor: pointer;
+}
+
+time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+}
+
+main {
+    line-height: 1.6;
+}
+
+hr {
+    border: 0;
+    border-top: 1px dashed;
+}
+
+img {
+    max-width: 100%;
+}
+
+code {
+    font-family: monospace;
+
+    color: rgb(136, 192, 208);
+}
+
+:not(pre) > code {
+    padding: 2px;
+    background-color: rgb(59, 66, 82);
+    border-radius: 3px;
+}
+
+blockquote {
+    border-left: 1px solid #999;
+    color: var(--blockquote-color);
+    padding-left: 20px;
+    font-style: italic;
+}
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+}
+
+.title:hover {
+    text-decoration: none;
+}
+
+.title h1 {
+    font-size: 1.5em;
+}
+
+.inline {
+    width: auto !important;
+}
+
+.highlight,
+.code {
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+}
+
+.highlight pre,
+.code pre {
+    min-width: 98%;
+    padding-left: 0.5em;
+    width: max-content;
+}
+
+ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+}
+
+ul.blog-posts li {
+    display: flex;
+}
+
+ul.blog-posts li span {
+    flex: 0 0 130px;
+}
+
+ul.blog-posts li a:visited {
+    color: var(--visited-color);
+}
+
+figcaption {
+    color: rgb(235, 203, 139);
+    font-style: italic;
+}
+
+a.tag {
+    font-size: 0.8em;
+    color: rgb(143, 188, 187);
+    background-color: rgb(76, 86, 106);
+    border-radius: 1em;
+    word-break: keep-all;
+    padding: 0.2em;
+}
+
+div.admonition-content {
+    background-color: var(--adm-color);
+    color: var(--text-color);
+}
+
+hr {
+    border: 0px;
+}
+
+div.footnotes > hr {
+    border-top: 1px solid;
+}
+
+/* ISOLATE TABLES FROM CODE using tables */
+content > table {
+    /*width: 100%;*/
+    background-color: rgb(59, 66, 82);
+}
+
+content > table th {
+    border: rgb(59, 66, 82);
+    border-width: 1px;
+    padding-left: 0.5em;
+}
+
+content > table td {
+    padding-left: 0.5em;
+}
+
+content > table tbody tr:nth-child(even) {
+    background-color: rgb(43, 48, 59);
+}
+
+content > table tbody tr:nth-child(odd) {
+    background-color: rgb(51, 58, 71);
+}
+
+content > table thead > tr {
+    background-color: rgb(34, 34, 45);
+}
